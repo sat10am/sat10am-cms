@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "Archive",
+  "info": {
+    "name": "archive",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slidesUrl": {
+      "type": "string"
+    },
+    "week": {
+      "type": "integer"
+    },
+    "author": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "archives",
+      "dominant": true
+    }
+  }
+}
